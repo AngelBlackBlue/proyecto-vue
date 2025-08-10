@@ -1,7 +1,24 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRegisterStore } from '@/modules/register/store/registerStore'
+import { ref, watch } from 'vue'
+const registerStore = useRegisterStore()
+const name = ref(registerStore.name)
+const email = ref(registerStore.email)
+watch(
+  () => registerStore.name,
+  (newValue) => { name.value = newValue },
+);
+watch(
+  () => registerStore.email,
+  (newValue) => { email.value = newValue },
+);
+</script>
+
 <template>
   <div class="sidebar">
-    <h2>Sidebar</h2>
+    <h2>Welcome!!!</h2>
+    <h3>Name: {{ name }}</h3>
+    <h3>Email: {{ email }}</h3>
     <ul>
       <li>
         <router-link to="/counter">Counter</router-link>
