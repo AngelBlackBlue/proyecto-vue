@@ -13,15 +13,21 @@ const router = createRouter({
       path: '/counter',
       name: 'counter',
 
-      component: () => import('../components/Counter.vue'),
+      component: () => import('../modules/counter/components/Counter.vue'),
     },
-        {
+    {
       path: '/list-task',
       name: 'listTask',
 
-      component: () => import('../components/ListTask.vue'),
+      component: () => import('../modules/listTask/components/ListTask.vue'),
     },
-  
+    {
+      path: '/register',
+      name: 'register',
+
+      component: () => import('../modules/register/views/RegisterView.vue'),
+    },
+
   ],
 })
 
