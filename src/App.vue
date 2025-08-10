@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import Counter from './components/Counter.vue';
+import MainVue from './views/MainVue.vue';
 </script>
 
 <template>
-
-  <Counter />
-
+  <MainVue />
 </template>
 
 <style scoped>
+
 
 </style>
