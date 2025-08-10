@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Contador from './components/Contador.vue';
+import Counter from './components/Counter.vue';
 </script>
 
 <template>
 
-  <Contador />
+  <Counter />
 
 </template>
 
